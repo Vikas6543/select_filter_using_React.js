@@ -21,7 +21,7 @@ const SelectFilter = () => {
   return (
     <div>
       <select
-        className='select-wrapper'
+        className='select-wrapper border'
         onChange={onChangeHandler}
         value={data}
       >
@@ -36,7 +36,8 @@ const SelectFilter = () => {
             className={i.gender == 'female' ? 'female' : 'male'}
             key={i.name}
           >
-            {i.name}
+            <p>Name - {i.name}</p>
+            <p className='mt-2'>Gender - {i.gender}</p>
           </div>
         ))}
     </div>
